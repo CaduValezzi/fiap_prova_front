@@ -1,0 +1,291 @@
+@import url(../fonts/gotham.css);
+
+:root {
+    --font-body: , 'sans-serif';
+    --color-magenta: #ED145B;
+    --color-grey: #202121;
+    --color-grey-2: #0B0C0D;
+    --color-black: #000;
+    --color-white: #fff;
+
+}
+
+html {
+    color: var(--color-white);
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+    body {
+        background-color: var(--color-black);
+        overflow-x: hidden;
+
+        .container-fluid {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+        }
+
+        header {
+            padding: 5px 0px;
+            max-height: 80px;
+            position: fixed;
+            top: 0;
+            z-index: 3;
+            transition: all 0.5s;
+
+            nav {
+                display: flex;
+                justify-content: center;
+                align-content: center;
+
+                .logoimg {
+                    margin: 20px 0px 20px 0px;
+                    height: 39px;
+                }
+            }
+
+            .page-bar {
+                background-color: var(--color-magenta);
+                margin: 0;
+                padding: 0;
+                height: 5px;
+                width: 100%;
+                transform-origin: 0 50%;
+                animation: growing-bar auto linear;
+                animation-timeline: scroll();
+            }
+
+            @keyframes growing-bar {
+                from {
+                    transform: scaleX(0);
+                }
+
+                to {
+                    transform: scaleX(1);
+                }
+
+            }
+        }
+
+        .menu-animation {
+            padding: 0;
+            background-color: var(--color-grey);
+            transition: all 0.5s;
+        }
+
+        main {
+            .main-container {
+                display: flex;
+                height: 100vh;
+
+                .main-box {
+                    margin: auto;
+
+                    h1 {
+                        font-family: Gotham HTF;
+                        font-size: 110px;
+                        font-weight: 500;
+                        line-height: 100px;
+                        letter-spacing: -0.05em;
+                        text-align: left;
+
+                    }
+
+                    h2 {
+                        position: absolute;
+                        top: 28vh;
+                        font-family: Gotham HTF;
+                        font-size: 350px;
+                        font-weight: 900;
+                        line-height: 27px;
+                        letter-spacing: -0.01em;
+                        text-align: center;
+                        z-index: -1;
+                        color: var(--color-grey-2);
+
+                    }
+                }
+            }
+        }
+
+        .intro {
+            .intro-container {
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+
+                p {
+                    margin-bottom: 3rem;
+                }
+
+                .intro-text-one {
+                    font-family: Gotham HTF;
+                    font-size: 83px;
+                    font-weight: 500;
+                    line-height: 27px;
+                    text-align: left;
+
+                    .class-txt,
+                    .tecno-txt {
+                        border-bottom: solid 2px var(--color-white);
+
+                        p {
+                            margin: 1.5rem 1.2px;
+                            padding: 1.5rem 0;
+                        }
+
+
+                    }
+
+                    .scroll-auto {
+                        width: 100vw;
+
+                        &-right__inner,
+                        &-left__inner {
+                            display: flex;
+                            flex-wrap: wrap;
+
+                        }
+
+                        & {
+                            overflow: hidden;
+
+                        }
+
+                        & .scroll-auto-right__inner {
+                            width: max-content;
+                            flex-wrap: nowrap;
+                            animation: scroll-auto-right 20s linear infinite;
+
+                        }
+
+                        & .scroll-auto-left__inner {
+                            width: max-content;
+                            flex-wrap: nowrap;
+                            animation: scroll-auto-left 20s linear infinite;
+
+                        }
+                    }
+
+
+                    @keyframes scroll-auto-right {
+                        from {
+                            transform: translate(-50%);
+                        }
+
+                    }
+
+                    @keyframes scroll-auto-left {
+
+                        to {
+                            transform: translate(calc(-50%));
+                        }
+                    }
+
+
+                }
+
+                .intro-figure {
+                    display: flex;
+                    height: 70%;
+
+                    .intro-img {
+                        margin: 3rem auto;
+                    }
+
+                    .container-curtain {
+                        background-color: var(--color-black);
+                        z-index: 0;
+                        position: absolute;
+                        width: 100vw;
+                        height: 804px;
+
+                        
+                    }
+                    .curtain__animation{
+                        animation: show-image 1s forwards;
+                    }
+
+                    @keyframes show-image {
+                        0% {
+                            height: 804px;
+                            top: 131vh;
+                        }
+
+                        100% {
+                            height: 0px;
+                            top: 195vh;
+                        }
+                    }
+
+                }
+
+                .intro-text-two {
+                    font-family: Gotham HTF;
+                    font-size: 144px;
+                    font-weight: 500;
+                    line-height: 27px;
+                    letter-spacing: -0.06em;
+                    text-align: left;
+                    z-index: 2;
+
+                    .tuto-txt {
+                        font-style: italic;
+                    }
+
+                    .scroll {
+                        width: 100vw;
+                        overflow: hidden;
+
+                        &-right__inner,
+                        &-left__inner {
+                            display: flex;
+                            flex-wrap: wrap;
+                            width: max-content;
+                            gap: 3rem;
+                            
+                            .dot{
+                                width: 150px;
+                                border: solid 5px var(--color-white);
+                                border-radius: 100%;
+                            }
+                        
+                            p{
+                                margin: 10px 0;
+                                padding: 70px 0;
+                            }
+                            .text__left{
+                                animation: scroll-left auto linear;
+                                animation-timeline: scroll();
+                            }
+                            .text__right{
+                                animation: scroll-right auto linear;
+                                animation-timeline: scroll();
+                            }
+
+
+                        }
+
+
+                    }
+
+                    @keyframes scroll-left {
+                        from{
+                            transform: translate(calc(-50% - 1.5rem));
+                        }
+                    }
+                    @keyframes scroll-right {
+                        to{
+                            transform: translate(calc(-50% - 1.5rem));
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
