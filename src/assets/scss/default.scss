@@ -54,22 +54,22 @@ html {
                 margin: 0;
                 padding: 0;
                 height: 5px;
-                width: 100%;
+                
                 transform-origin: 0 50%;
-                animation: growing-bar auto linear;
-                animation-timeline: scroll();
+                // animation: growing-bar auto linear;
+                // animation-timeline: scroll();
             }
 
-            @keyframes growing-bar {
-                from {
-                    transform: scaleX(0);
-                }
+            // @keyframes growing-bar {
+            //     from {
+            //         transform: scaleX(0);
+            //     }
 
-                to {
-                    transform: scaleX(1);
-                }
+            //     to {
+            //         transform: scaleX(1);
+            //     }
 
-            }
+            // }
         }
 
         .menu-animation {
