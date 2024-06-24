@@ -205,9 +205,10 @@ html {
                         width: 100vw;
                         height: 804px;
 
-                        
+
                     }
-                    .curtain__animation{
+
+                    .curtain__animation {
                         animation: show-image 1s forwards;
                     }
 
@@ -242,30 +243,36 @@ html {
                         width: 100vw;
                         overflow: hidden;
 
-                        &-right__inner,
-                        &-left__inner {
+                        &-left__inner,
+                        &-right__inner {
                             display: flex;
                             flex-wrap: wrap;
                             width: max-content;
                             gap: 3rem;
-                            
-                            .dot{
-                                width: 150px;
-                                border: solid 5px var(--color-white);
-                                border-radius: 100%;
-                            }
-                        
-                            p{
+
+
+                            p {
                                 margin: 10px 0;
                                 padding: 70px 0;
                             }
-                            .text__left{
-                                animation: scroll-left auto linear;
-                                animation-timeline: scroll();
+
+                            .line-1-text__left,
+                            .line-2-text__left {
+                                width: max-content;
+                                position: absolute;
+                                top: 180vh;
+                                left: 0px;
+                                // animation: scroll-left auto linear;
+                                // animation-timeline: scroll();
                             }
-                            .text__right{
-                                animation: scroll-right auto linear;
-                                animation-timeline: scroll();
+
+                            .line-1-text__right,
+                            .line-2-text__right {
+                                width: max-content;
+                                position: absolute;
+                                right: 0px;
+                                // animation: scroll-right auto linear;
+                                // animation-timeline: scroll();
                             }
 
 
@@ -274,16 +281,17 @@ html {
 
                     }
 
-                    @keyframes scroll-left {
-                        from{
-                            transform: translate(calc(-50% - 1.5rem));
-                        }
-                    }
-                    @keyframes scroll-right {
-                        to{
-                            transform: translate(calc(-50% - 1.5rem));
-                        }
-                    }
+                    // @keyframes scroll-left {
+                    //     from {
+                    //         transform: translate(calc(-50% - 1.5rem));
+                    //     }
+                    // }
+
+                    // @keyframes scroll-right {
+                    //     to {
+                    //         transform: translate(calc(-50% - 1.5rem));
+                    //     }
+                    // }
                 }
             }
         }

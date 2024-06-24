@@ -190,38 +190,30 @@ html body .intro .intro-container .intro-text-two .scroll {
   width: 100vw;
   overflow: hidden;
 }
-html body .intro .intro-container .intro-text-two .scroll-right__inner, html body .intro .intro-container .intro-text-two .scroll-left__inner {
+html body .intro .intro-container .intro-text-two .scroll-left__inner, html body .intro .intro-container .intro-text-two .scroll-right__inner {
   display: flex;
   flex-wrap: wrap;
   width: max-content;
   gap: 3rem;
 }
-html body .intro .intro-container .intro-text-two .scroll-right__inner .dot, html body .intro .intro-container .intro-text-two .scroll-left__inner .dot {
-  width: 150px;
-  border: solid 5px var(--color-white);
-  border-radius: 100%;
-}
-html body .intro .intro-container .intro-text-two .scroll-right__inner p, html body .intro .intro-container .intro-text-two .scroll-left__inner p {
+html body .intro .intro-container .intro-text-two .scroll-left__inner p, html body .intro .intro-container .intro-text-two .scroll-right__inner p {
   margin: 10px 0;
   padding: 70px 0;
 }
-html body .intro .intro-container .intro-text-two .scroll-right__inner .text__left, html body .intro .intro-container .intro-text-two .scroll-left__inner .text__left {
-  animation: scroll-left auto linear;
-  animation-timeline: scroll();
+html body .intro .intro-container .intro-text-two .scroll-left__inner .line-1-text__left,
+html body .intro .intro-container .intro-text-two .scroll-left__inner .line-2-text__left, html body .intro .intro-container .intro-text-two .scroll-right__inner .line-1-text__left,
+html body .intro .intro-container .intro-text-two .scroll-right__inner .line-2-text__left {
+  width: max-content;
+  position: absolute;
+  top: 180vh;
+  left: 0px;
 }
-html body .intro .intro-container .intro-text-two .scroll-right__inner .text__right, html body .intro .intro-container .intro-text-two .scroll-left__inner .text__right {
-  animation: scroll-right auto linear;
-  animation-timeline: scroll();
-}
-@keyframes scroll-left {
-  from {
-    transform: translate(calc(-50% - 1.5rem));
-  }
-}
-@keyframes scroll-right {
-  to {
-    transform: translate(calc(-50% - 1.5rem));
-  }
+html body .intro .intro-container .intro-text-two .scroll-left__inner .line-1-text__right,
+html body .intro .intro-container .intro-text-two .scroll-left__inner .line-2-text__right, html body .intro .intro-container .intro-text-two .scroll-right__inner .line-1-text__right,
+html body .intro .intro-container .intro-text-two .scroll-right__inner .line-2-text__right {
+  width: max-content;
+  position: absolute;
+  right: 0px;
 }
 
 /*# sourceMappingURL=default.css.map */

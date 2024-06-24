@@ -5,6 +5,10 @@ import FiapLogo from "../assets/svgs/logo-fiap.svg"
 
 export const Menu = () => {
     window.addEventListener('scroll', () => {
+
+        
+
+
         if (window.scrollY > 1) {
             document.querySelector(".menu").classList.add("menu-animation")
         }

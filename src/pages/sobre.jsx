@@ -5,8 +5,18 @@ import { Menu } from '../components/menu';
 import Intro from '../assets/imgs/intro.png'
 
 export const Sobre = () => {
-   const curtain = document.querySelector(".container-curtain")
+
    window.addEventListener('scroll', () => {
+      let position = window.scrollY - 500;
+      const line1left = document.querySelector(".line-1-text__left")
+      const line2left = document.querySelector(".line-2-text__left")
+      const line1right = document.querySelector(".line-1-text__right")
+      const line2right = document.querySelector(".line-2-text__right")
+      line1left.style.left = `${position}px`
+      line2left.style.left = `${position - 1655 - 24}px`
+      line1right.style.left = `${-position + 1000}px`
+      line2right.style.left = `${-position - 2481 + 1000}px`
+
       if (window.scrollY > 716) {
          document.querySelector(".container-curtain").classList.add("curtain__animation")
       }
@@ -44,27 +54,25 @@ export const Sobre = () => {
                </div>
                <div className='intro-figure'>
                   <img className='intro-img' src={Intro} alt="" />
-                  <div className='container-curtain test'></div>
+                  <div className='container-curtain curtain'></div>
                </div>
                <div className='intro-text-two '>
                   <div className='scroll-left__inner'>
-                     <p className='text__left'>
-                        • SKILL • CONHCIMENTO
-                     </p>
-                     <p className='text__left'>
-                        • SKILL • CONHCIMENTO
-                     </p>
+                     <p className='line-1-text__left text'> • SKILL • CONHCIMENTO </p>
+                     <p className='line-2-text__left text'> • SKILL • CONHCIMENTO</p>
                   </div>
                   <div className='scroll-right__inner'>
-                     <p className='text__right'>MUITO. MUITO ALÉM DOS TUTORIAIS</p>
-                     <p className='text__right'>MUITO. MUITO ALÉM DOS TUTORIAIS</p>
+                     <p className='line-1-text__right  text'>MUITO. MUITO ALÉM DOS TUTORIAIS</p>
+                     <p className='line-2-text__right  text'>MUITO. MUITO ALÉM DOS TUTORIAIS</p>
                   </div>
 
                </div>
             </div>
          </section>
          <section className='container-fluid'>
+            <div className='water-container'>
 
+            </div>
          </section>
       </>
    )
