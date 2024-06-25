@@ -4,6 +4,7 @@
   --color-magenta: #ED145B;
   --color-grey: #202121;
   --color-grey-2: #0B0C0D;
+  --color-grey-3: #454C4F;
   --color-black: #000;
   --color-white: #fff;
 }
@@ -83,7 +84,7 @@ html body main .main-container .main-box h2 {
   color: var(--color-grey-2);
 }
 html body .intro .intro-container {
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -138,9 +139,9 @@ html body .intro .intro-container .intro-text-one .scroll-auto .scroll-auto-left
 }
 html body .intro .intro-container .intro-figure {
   display: flex;
-  height: 70%;
 }
 html body .intro .intro-container .intro-figure .intro-img {
+  min-width: 1495px;
   margin: 3rem auto;
 }
 html body .intro .intro-container .intro-figure .container-curtain {
@@ -160,7 +161,7 @@ html body .intro .intro-container .intro-figure .curtain__animation {
   }
   100% {
     height: 0px;
-    top: 195vh;
+    top: 220vh;
   }
 }
 html body .intro .intro-container .intro-text-two {
@@ -171,6 +172,8 @@ html body .intro .intro-container .intro-text-two {
   letter-spacing: -0.06em;
   text-align: left;
   z-index: 2;
+  color: transparent;
+  -webkit-text-stroke: 2px var(--color-grey-3);
 }
 html body .intro .intro-container .intro-text-two .tuto-txt {
   font-style: italic;
@@ -187,14 +190,14 @@ html body .intro .intro-container .intro-text-two .scroll-left__inner, html body
 }
 html body .intro .intro-container .intro-text-two .scroll-left__inner p, html body .intro .intro-container .intro-text-two .scroll-right__inner p {
   margin: 10px 0;
-  padding: 70px 0;
+  padding: 50px 0;
 }
 html body .intro .intro-container .intro-text-two .scroll-left__inner .line-1-text__left,
 html body .intro .intro-container .intro-text-two .scroll-left__inner .line-2-text__left, html body .intro .intro-container .intro-text-two .scroll-right__inner .line-1-text__left,
 html body .intro .intro-container .intro-text-two .scroll-right__inner .line-2-text__left {
   width: max-content;
   position: absolute;
-  top: 180vh;
+  top: 205vh;
   left: 0px;
 }
 html body .intro .intro-container .intro-text-two .scroll-left__inner .line-1-text__right,
@@ -203,6 +206,15 @@ html body .intro .intro-container .intro-text-two .scroll-right__inner .line-2-t
   width: max-content;
   position: absolute;
   right: 0px;
+}
+html body .water {
+  margin: 200px 0;
+}
+html body .water .water-container {
+  border: 1px solid lime;
+}
+html body .water .water-container img {
+  height: 100%;
 }
 
 /*# sourceMappingURL=default.css.map */

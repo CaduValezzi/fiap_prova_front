@@ -5,6 +5,7 @@
     --color-magenta: #ED145B;
     --color-grey: #202121;
     --color-grey-2: #0B0C0D;
+    --color-grey-3: #454C4F;
     --color-black: #000;
     --color-white: #fff;
 
@@ -54,7 +55,7 @@ html {
                 margin: 0;
                 padding: 0;
                 height: 5px;
-                
+
                 transform-origin: 0 50%;
                 // animation: growing-bar auto linear;
                 // animation-timeline: scroll();
@@ -115,7 +116,7 @@ html {
 
         .intro {
             .intro-container {
-                height: 100vh;
+                height: 100%;
                 display: flex;
                 flex-direction: column;
 
@@ -192,9 +193,11 @@ html {
 
                 .intro-figure {
                     display: flex;
-                    height: 70%;
+
+
 
                     .intro-img {
+                        min-width: 1495px;
                         margin: 3rem auto;
                     }
 
@@ -220,7 +223,7 @@ html {
 
                         100% {
                             height: 0px;
-                            top: 195vh;
+                            top: 220vh;
                         }
                     }
 
@@ -234,6 +237,8 @@ html {
                     letter-spacing: -0.06em;
                     text-align: left;
                     z-index: 2;
+                    color: transparent;
+                    -webkit-text-stroke: 2px var(--color-grey-3);
 
                     .tuto-txt {
                         font-style: italic;
@@ -253,17 +258,16 @@ html {
 
                             p {
                                 margin: 10px 0;
-                                padding: 70px 0;
+                                padding: 50px 0;
                             }
 
                             .line-1-text__left,
                             .line-2-text__left {
                                 width: max-content;
                                 position: absolute;
-                                top: 180vh;
+                                top: 205vh;
                                 left: 0px;
-                                // animation: scroll-left auto linear;
-                                // animation-timeline: scroll();
+
                             }
 
                             .line-1-text__right,
@@ -271,8 +275,7 @@ html {
                                 width: max-content;
                                 position: absolute;
                                 right: 0px;
-                                // animation: scroll-right auto linear;
-                                // animation-timeline: scroll();
+
                             }
 
 
@@ -281,18 +284,20 @@ html {
 
                     }
 
-                    // @keyframes scroll-left {
-                    //     from {
-                    //         transform: translate(calc(-50% - 1.5rem));
-                    //     }
-                    // }
-
-                    // @keyframes scroll-right {
-                    //     to {
-                    //         transform: translate(calc(-50% - 1.5rem));
-                    //     }
-                    // }
                 }
+            }
+        }
+
+        .water {
+            margin: 200px 0;
+
+            .water-container {
+                border: 1px solid lime;
+                img{ 
+                    height: 100%;
+                }
+                // background-image: url("../imgs/water/water_191.jpg");
+
             }
         }
     }

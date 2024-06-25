@@ -1,5 +1,4 @@
 import React from 'react'
-import styled, { css } from 'styled-components';
 // images
 import FiapLogo from "../assets/svgs/logo-fiap.svg"
 
@@ -8,9 +7,9 @@ export const Menu = () => {
         const bar = document.querySelector(".page-bar")
         const pageHeight = document.querySelector("body").clientHeight
         let width = (window.scrollY * 100) / (pageHeight - window.innerHeight)
-        console.log(width)
+        // console.log(width)
         bar.style.width = `${width}%`
-        console.log(bar.style.width)
+        // console.log(bar.style.width)
 
 
 
