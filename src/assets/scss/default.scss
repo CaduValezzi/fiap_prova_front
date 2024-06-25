@@ -78,17 +78,31 @@ html {
                 .main-box {
                     margin: auto;
 
-                    h1 {
+                    .main-title {
                         font-family: Gotham HTF;
                         font-size: 110px;
                         font-weight: 500;
                         line-height: 100px;
                         letter-spacing: -0.05em;
                         text-align: left;
+                        color: var(--color-black);
+                        span{ 
+                            position: relative;
+                            top: -20px;
+                        }
+                        
+                        &[active="true"]{
+                            color: var(--color-white);
+                            transition: color 1.5s ease-in;
+                            span{
+                                top:0;
+                                transition: top 0.5s ease-in;
+                            }
+                        }
 
                     }
 
-                    h2 {
+                    .main-subtitle {
                         position: absolute;
                         top: 28vh;
                         font-family: Gotham HTF;
@@ -98,8 +112,11 @@ html {
                         letter-spacing: -0.01em;
                         text-align: center;
                         z-index: -1;
-                        color: var(--color-grey-2);
-
+                        color: var(--color-black);
+                        &[active=true]{
+                            color: var(--color-grey-2);
+                            transition: color 1s ease-in;
+                        }
                     }
                 }
             }

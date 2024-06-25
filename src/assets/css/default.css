@@ -65,15 +65,28 @@ html body main .main-container {
 html body main .main-container .main-box {
   margin: auto;
 }
-html body main .main-container .main-box h1 {
+html body main .main-container .main-box .main-title {
   font-family: Gotham HTF;
   font-size: 110px;
   font-weight: 500;
   line-height: 100px;
   letter-spacing: -0.05em;
   text-align: left;
+  color: var(--color-black);
 }
-html body main .main-container .main-box h2 {
+html body main .main-container .main-box .main-title span {
+  position: relative;
+  top: -20px;
+}
+html body main .main-container .main-box .main-title[active=true] {
+  color: var(--color-white);
+  transition: color 1.5s ease-in;
+}
+html body main .main-container .main-box .main-title[active=true] span {
+  top: 0;
+  transition: top 0.5s ease-in;
+}
+html body main .main-container .main-box .main-subtitle {
   position: absolute;
   top: 28vh;
   font-family: Gotham HTF;
@@ -83,7 +96,11 @@ html body main .main-container .main-box h2 {
   letter-spacing: -0.01em;
   text-align: center;
   z-index: -1;
+  color: var(--color-black);
+}
+html body main .main-container .main-box .main-subtitle[active=true] {
   color: var(--color-grey-2);
+  transition: color 1s ease-in;
 }
 html body .intro .intro-container {
   height: 100%;
