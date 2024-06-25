@@ -80,11 +80,11 @@ html body main .main-container .main-box .main-title span {
 }
 html body main .main-container .main-box .main-title[active=true] {
   color: var(--color-white);
-  transition: color 1.5s ease-in;
+  transition: color 2.5s ease-in;
 }
 html body main .main-container .main-box .main-title[active=true] span {
   top: 0;
-  transition: top 0.5s ease-in;
+  transition: top 2.5s ease-in;
 }
 html body main .main-container .main-box .main-subtitle {
   position: absolute;
@@ -100,7 +100,7 @@ html body main .main-container .main-box .main-subtitle {
 }
 html body main .main-container .main-box .main-subtitle[active=true] {
   color: var(--color-grey-2);
-  transition: color 1s ease-in;
+  transition: color 3s ease-in;
 }
 html body .intro .intro-container {
   height: 100%;
