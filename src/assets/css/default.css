@@ -210,9 +210,6 @@ html body .intro .intro-container .intro-text-two .scroll-right__inner .line-2-t
 html body .water {
   margin: 200px 0;
 }
-html body .water .water-container {
-  border: 1px solid lime;
-}
 html body .water .water-container img {
   height: 100%;
 }
