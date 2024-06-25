@@ -22,12 +22,12 @@ export const Sobre = () => {
 
 
          // Lógica para mudar o endereço da imagem com base na posição do scroll
-         if (scrollPosition/6 < 10) {
-            setImageSrc(`imgs/water/water_00${Math.round(scrollPosition/6)}.jpg`);
-         } else if (scrollPosition/6  < 100) {
-            setImageSrc(`imgs/water/water_0${Math.round(scrollPosition/6)}.jpg`);
-         } else if(scrollPosition/6  >= 100) {
-            setImageSrc(`imgs/water/water_${Math.round(scrollPosition/6)}.jpg`);
+         if (scrollPosition / 6 < 10) {
+            setImageSrc(`imgs/water/water_00${Math.round(scrollPosition / 6)}.jpg`);
+         } else if (scrollPosition / 6 < 100) {
+            setImageSrc(`imgs/water/water_0${Math.round(scrollPosition / 6)}.jpg`);
+         } else if (scrollPosition / 6 >= 100) {
+            setImageSrc(`imgs/water/water_${Math.round(scrollPosition / 6)}.jpg`);
          }
       };
 
@@ -57,7 +57,7 @@ export const Sobre = () => {
       line1right.style.left = `${-position + 1000}px`
       line2right.style.left = `${-position - 2481 + 1000}px`
 
-      
+
 
       if (window.scrollY > 716) {
          document.querySelector(".container-curtain").classList.add("curtain__animation")
@@ -107,16 +107,38 @@ export const Sobre = () => {
                      <p className='line-1-text__right text tuto-txt'>MUITO. MUITO ALÉM DOS TUTORIAIS</p>
                      <p className='line-2-text__right text tuto-txt'>MUITO. MUITO ALÉM DOS TUTORIAIS</p>
                   </div>
-
                </div>
             </div>
          </section>
+
          <section className='container-fluid water'>
             <div className='water-container'>
                <img src={imageSrc} alt="" />
             </div>
          </section>
-         
+
+         <section className='container-fluid cursos'>
+            <div className='cursos-container'>
+               <div className='cursos-title-section'>
+                  <p className='title-section-text'>Cursos</p>
+                  <p className='subtitle-section-text'>Cursos de Curta Duração</p>
+               </div>
+               <div className='cursos-nav'>
+                  <ul className='cursos-nav-list'>
+                     <li className='cursos-nav-iten'>TECNOLOGIA</li>
+                     <li className='cursos-nav-iten'>INOVAÇÃO</li>
+                     <li className='cursos-nav-iten'>NEGÓCIOS</li>
+                  </ul>
+               </div>
+               <div className='cursos-iten'>
+                  <p className='cursos-iten-title'>Tecnologia</p>
+                  <p className='cursos-iten-text'>Big Data Ecosystem <span>REMOTO • LIVE</span></p>
+                  <p className='cursos-iten-text'>Creating Dashboards for BI <span>REMOTO • LIVE</span></p>
+                  <p className='cursos-iten-text'>Big Data Science - Machine Learning & Data Mining <span>REMOTO • LIVE</span></p>
+                  <p className='cursos-iten-text'>Storytelling <span>REMOTO • LIVE</span></p>
+               </div>
+            </div>
+         </section>
       </>
    )
 }
