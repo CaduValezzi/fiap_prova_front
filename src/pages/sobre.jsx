@@ -66,13 +66,20 @@ export const Sobre = () => {
 
    })
 
+   const handleClick = () =>{
+      const navCursos = document.querySelectorAll(".cursos-nav-iten")
+      
+   }
+
+   
+
    return (
       <>
          <Menu />
          <main className='container-fluid main' id='main'>
             <div className='main-container'>
                <div className='main-box'>
-                  <h1>...A Melhor Faculdade<br />de Tecnologia</h1>
+                  <h1>‎ ‎ ‎ A Melhor Faculdade<br />de Tecnologia</h1>
                   <h2>SOBRE</h2>
                </div>
             </div>
@@ -113,7 +120,7 @@ export const Sobre = () => {
 
          <section className='container-fluid water'>
             <div className='water-container'>
-               <img src={imageSrc} alt="" />
+               <img src={imageSrc} alt="agua" />
             </div>
          </section>
 
@@ -125,17 +132,73 @@ export const Sobre = () => {
                </div>
                <div className='cursos-nav'>
                   <ul className='cursos-nav-list'>
-                     <li className='cursos-nav-iten'>TECNOLOGIA</li>
-                     <li className='cursos-nav-iten'>INOVAÇÃO</li>
-                     <li className='cursos-nav-iten'>NEGÓCIOS</li>
+                     <li onClick={handleClick} className='cursos-nav-iten'>
+                        <div className='border-bar-cursos'></div>
+                        <p className='cursos-nav-title'>TECNOLOGIA</p>
+                     </li>
+                     <li onClick={handleClick} className='cursos-nav-iten'>
+                        <div className='border-bar-cursos'></div>
+                        <p className='cursos-nav-title'>INOVAÇÃO</p>
+                     </li>
+                     <li onClick={handleClick} className='cursos-nav-iten'>
+                        <div className='border-bar-cursos'></div>
+                        <p className='cursos-nav-title'>NEGÓCIOS</p>
+                     </li>
                   </ul>
                </div>
-               <div className='cursos-iten'>
+               <div className='cursos-iten tecnologia'>
                   <p className='cursos-iten-title'>Tecnologia</p>
                   <p className='cursos-iten-text'>Big Data Ecosystem <span>REMOTO • LIVE</span></p>
                   <p className='cursos-iten-text'>Creating Dashboards for BI <span>REMOTO • LIVE</span></p>
-                  <p className='cursos-iten-text'>Big Data Science - Machine Learning & Data Mining <span>REMOTO • LIVE</span></p>
+                  <p className='cursos-iten-text'>Big Data Science - Machine Learning & Data Mining <span>REMOTO • LIVE + MULTIMÍDIA</span></p>
                   <p className='cursos-iten-text'>Storytelling <span>REMOTO • LIVE</span></p>
+               </div>
+            </div>
+         </section>
+
+         <section className='container-fluid faq'>
+            <div className='faq-container'>
+               <div className='faq-title-section'>
+                  <div className='border-bar'></div>
+                  <p className='title-section-text'>FAQ</p>
+                  <p className='subtitle-section-text'>Dúvidas Frequentes</p>
+               </div>
+               <div className='faq-sections'>
+                  <div className='faq-sections-updown'>
+                     <div className="faq-sections-div">
+                        <div className='border-bar'></div>
+                        <p className='div-question'>QUANDO POSSO ME MATRICULAR?</p>
+                        <p className='div-answer'>Você pode se matricular em qualquer dia e hora, basta acessar a página do curso e se inscrever.</p>
+                     </div>
+                     <div className="faq-sections-div">
+                        <div className='border-bar'></div>
+                        <p className='div-question'>POSSO FAZER DOIS OU MAIS CURSOS AO MESMO TEMPO?</p>
+                        <p className='div-answer'>Sim. Apenas atente-se às datas, elas devem ser diferentes, porque cada curso tem sua dinâmica.</p>
+                     </div>
+                     <div className="faq-sections-div">
+                        <div className='border-bar'></div>
+                        <p className='div-question'>QUAIS OS PRÉ-REQUISITOS?</p>
+                        <p className='div-answer'>Cada curso tem seus pré-requisitos descritos na própria página. Identifique-os, para que você obtenha um melhor aproveitamento do seu SHIFT.</p>
+                     </div>
+                  </div>
+                  <div className='faq-sections-updown'>
+                     <div className="faq-sections-div">
+                        <div className='border-bar'></div>
+                        <p className='div-question'>QUAL A DURAÇÃO DOS CURSOS?</p>
+                        <p className='div-answer'>De 6 a 42 horas.</p>
+                     </div>
+                     <div className="faq-sections-div">
+                        <div className='border-bar'></div>
+                        <p className='div-question'>PRECISO LEVAR ALGUM MATERIAL PARA AS AULAS?</p>
+                        <p className='div-answer'>Não. Os materiais utilizados em sala de aula são fornecidos pela FIAP e as aulas mais técnicas são realizadas em nossos próprios laboratórios. Sugerimos somente que traga o que preferir para suas anotações.</p>
+                     </div>
+                     <div className="faq-sections-div">
+                        <div className='border-bar'></div>
+                        <p className='div-question'>VOU RECEBER CERTIFICADO DE CONCLUSÃO DE CURSO?</p>
+                        <p className='div-answer'>Sim. Ao cumprir pelo menos 75% da carga horária do curso, você receberá um Certificado Digital, que poderá ser acessado na plataforma.</p>
+                     </div>
+                  </div>
+
                </div>
             </div>
          </section>

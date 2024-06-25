@@ -6,6 +6,7 @@
   --color-grey: #202121;
   --color-grey-2: #0B0C0D;
   --color-grey-3: #454C4F;
+  --color-grey-4: #8A959B;
   --color-black: #000;
   --color-white: #fff;
 }
@@ -214,10 +215,13 @@ html body .water {
 html body .water .water-container img {
   height: 100%;
 }
+html body .cursos {
+  margin: 10rem 0 0 0;
+}
 html body .cursos .cursos-container {
   height: 100%;
-  width: 70%;
-  margin: 200px auto;
+  width: 80%;
+  margin: 0px auto;
   display: flex;
   flex-wrap: wrap;
   font-family: Gotham HTF;
@@ -250,7 +254,18 @@ html body .cursos .cursos-container .cursos-nav-list {
   list-style-type: none;
 }
 html body .cursos .cursos-container .cursos-nav-list .cursos-nav-iten {
-  color: #8A959B;
+  color: var(--color-grey-4);
+}
+html body .cursos .cursos-container .cursos-nav-list .cursos-nav-iten .cursos-nav-title {
+  margin: 0;
+}
+html body .cursos .cursos-container .cursos-nav-list .cursos-nav-iten .cursos-nav-title[active=true] {
+  color: #fff;
+}
+html body .cursos .cursos-container .cursos-nav-list .cursos-nav-iten .border-bar-cursos[active=true] {
+  width: 30%;
+  background-color: var(--color-magenta);
+  transition: width 0.5s ease-in;
 }
 html body .cursos .cursos-container .cursos-iten {
   width: 100%;
@@ -267,10 +282,17 @@ html body .cursos .cursos-container .cursos-iten .cursos-iten-text {
   font-weight: 400;
   line-height: 30px;
   text-align: left;
-  padding-bottom: 15px;
-  width: 50%;
-  color: #8A959B;
-  border-bottom: 1px solid #8A959B;
+  margin: 0;
+  padding: 20px 0;
+  width: 60%;
+  color: var(--color-grey-4);
+  border-bottom: 1px solid var(--color-grey-4);
+  transition: 0.5s;
+}
+html body .cursos .cursos-container .cursos-iten .cursos-iten-text:hover {
+  transition: 0.5s;
+  color: var(--color-magenta);
+  border-color: #ED145B;
 }
 html body .cursos .cursos-container .cursos-iten .cursos-iten-text span {
   font-family: Gotham HTF;
@@ -279,6 +301,81 @@ html body .cursos .cursos-container .cursos-iten .cursos-iten-text span {
   line-height: 12px;
   letter-spacing: 0.07em;
   text-align: left;
+}
+html body .faq {
+  margin: 4rem 0 0 0;
+}
+html body .faq .faq-container {
+  height: 100%;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  font-family: Gotham HTF;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  text-align: left;
+}
+html body .faq .faq-container .faq-title-section {
+  width: 100%;
+  height: 15%;
+}
+html body .faq .faq-container .faq-title-section .title-section-text {
+  font-weight: 400;
+  font-size: 92px;
+  margin: 0;
+}
+html body .faq .faq-container .faq-title-section .subtitle-section-text {
+  margin-top: 0;
+  font-size: 22px;
+  color: var(--color-magenta);
+}
+html body .faq .faq-container .faq-sections {
+  width: 100%;
+  height: 85%;
+  align-content: center;
+}
+html body .faq .faq-container .faq-sections .faq-sections-updown {
+  display: flex;
+  justify-content: space-between;
+  height: 30%;
+}
+html body .faq .faq-container .faq-sections .faq-sections-updown .faq-sections-div {
+  width: 30%;
+  font-family: Gotham HTF;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+  text-align: left;
+}
+html body .faq .faq-container .faq-sections .faq-sections-updown .faq-sections-div .border-bar {
+  width: 20%;
+  height: 2px;
+  background-color: var(--color-grey-4);
+  transition: width 0.5s ease-in;
+}
+html body .faq .faq-container .faq-sections .faq-sections-updown .faq-sections-div .div-question {
+  transition: opacity 0.5s ease-in;
+  color: var(--color-grey-4);
+}
+html body .faq .faq-container .faq-sections .faq-sections-updown .faq-sections-div .div-answer {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+  color: var(--color-grey-4);
+}
+html body .faq .faq-container .faq-sections .faq-sections-updown .faq-sections-div:hover .border-bar {
+  width: 100%;
+  background-color: var(--color-magenta);
+  transition: width 0.5s ease-in;
+}
+html body .faq .faq-container .faq-sections .faq-sections-updown .faq-sections-div:hover .div-question {
+  transition: opacity 0.5s ease-in;
+  color: var(--color-white);
+}
+html body .faq .faq-container .faq-sections .faq-sections-updown .faq-sections-div:hover .div-answer {
+  transition: opacity 0.5s ease-in;
+  opacity: 1;
 }
 
 /*# sourceMappingURL=default.css.map */
