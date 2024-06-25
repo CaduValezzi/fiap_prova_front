@@ -3,7 +3,9 @@ import React, { useEffect } from 'react'
 export const Main = () => {
 
     useEffect(() => {
-        const handlePageLoad = () => {
+        const handlePageLoad = (event) => {
+            event.preventDefault();
+            event.returnValue = '';
             const title = document.querySelector(".main-title")
             const subTitle = document.querySelector(".main-subtitle")
 
@@ -15,7 +17,7 @@ export const Main = () => {
 
         // Adiciona o evento de listener para a página carregar
         window.addEventListener('beforeunload', handlePageLoad);
-        
+
 
         // Remove o event listener quando o componente é desmontado
         return () => {
