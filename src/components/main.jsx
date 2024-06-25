@@ -14,16 +14,22 @@ export const Main = () => {
         };
 
         // Adiciona o evento de listener para a página carregar
-        window.addEventListener('load', handlePageLoad);
         window.addEventListener('beforeunload', handlePageLoad);
+        
 
         // Remove o event listener quando o componente é desmontado
         return () => {
-            window.removeEventListener('load', handlePageLoad);
             window.removeEventListener('beforeunload', handlePageLoad);
         };
     }, []);
 
+    window.addEventListener('load', () => {
+        const title = document.querySelector(".main-title")
+        const subTitle = document.querySelector(".main-subtitle")
+
+        title.setAttribute("active", true)
+        subTitle.setAttribute("active", true)
+    })
     return (
         <>
             <main className='container-fluid main' id='main'>
